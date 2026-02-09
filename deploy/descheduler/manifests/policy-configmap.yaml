@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: deschedbench-policy
+  namespace: {{NAMESPACE}}
+  labels:
+    app: deschedbench-descheduler
+    deschedbench: "true"
+data:
+  policy.yaml: |
+{{POLICY_YAML}}

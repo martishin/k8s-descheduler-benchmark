@@ -1,0 +1,40 @@
+apiVersion: "descheduler/v1alpha2"
+kind: "DeschedulerPolicy"
+
+maxNoOfPodsToEvictPerNode: 10
+maxNoOfPodsToEvictPerNamespace: 20
+
+profiles:
+  - name: "deschedbench"
+    pluginConfig:
+      - name: "DefaultEvictor"
+        args:
+          labelSelector:
+            matchLabels:
+              deschedbench: "true"
+          evictLocalStoragePods: false
+          evictSystemCriticalPods: false
+          ignorePvcPods: true
+          nodeFit: true
+      - name: "LowNodeUtilization"
+        args:
+          thresholds:
+            cpu: 20
+            memory: 20
+            pods: 20
+          targetThresholds:
+            cpu: 50
+            memory: 50
+            pods: 50
+      - name: "RemoveDuplicates"
+        args:
+          namespaces:
+            include:
+              - {{NAMESPACE}}
+    plugins:
+      balance:
+        enabled:
+          - "LowNodeUtilization"
+      deschedule:
+        enabled:
+          - "RemoveDuplicates"

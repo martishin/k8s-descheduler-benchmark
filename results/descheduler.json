@@ -1,0 +1,445 @@
+{
+  "config": {
+    "run_id": "20260209-025012",
+    "scenario": "maintenance",
+    "profile": "low-node-utilization",
+    "namespace": "deschedbench-20260209-025012",
+    "start_time": "2026-02-09T02:52:28.341183+01:00",
+    "context": "deschedbench",
+    "server": "https://127.0.0.1:57140",
+    "pods_total": 60,
+    "pod_cpu": "100m",
+    "pod_memory": "128Mi",
+    "descheduler_image": "registry.k8s.io/descheduler/descheduler:v0.32.2",
+    "descheduler_namespace": "deschedbench-20260209-025012",
+    "descheduler_cron": "job",
+    "sample_interval": "5s",
+    "sample_duration": "0s"
+  },
+  "phases": [
+    {
+      "name": "workload:create",
+      "time": "2026-02-09T02:50:12.832199+01:00"
+    },
+    {
+      "name": "workload:ready",
+      "time": "2026-02-09T02:50:18.846148+01:00"
+    },
+    {
+      "name": "snapshot:before",
+      "time": "2026-02-09T02:50:18.846165+01:00"
+    },
+    {
+      "name": "descheduler:install",
+      "time": "2026-02-09T02:50:18.867502+01:00"
+    },
+    {
+      "name": "maintenance:iteration",
+      "time": "2026-02-09T02:50:18.967767+01:00"
+    },
+    {
+      "name": "cordon:start",
+      "time": "2026-02-09T02:50:18.971202+01:00"
+    },
+    {
+      "name": "cordon:done",
+      "time": "2026-02-09T02:50:18.979308+01:00"
+    },
+    {
+      "name": "drain:start",
+      "time": "2026-02-09T02:50:19.063964+01:00"
+    },
+    {
+      "name": "drain:done",
+      "time": "2026-02-09T02:50:23.797827+01:00"
+    },
+    {
+      "name": "reschedule:ready",
+      "time": "2026-02-09T02:50:23.812039+01:00"
+    },
+    {
+      "name": "uncordon:start",
+      "time": "2026-02-09T02:50:23.812049+01:00"
+    },
+    {
+      "name": "uncordon:done",
+      "time": "2026-02-09T02:50:23.820213+01:00"
+    },
+    {
+      "name": "descheduler:run",
+      "time": "2026-02-09T02:50:23.820225+01:00"
+    },
+    {
+      "name": "descheduler:done",
+      "time": "2026-02-09T02:50:23.827777+01:00"
+    },
+    {
+      "name": "maintenance:iteration",
+      "time": "2026-02-09T02:51:23.828232+01:00"
+    },
+    {
+      "name": "cordon:start",
+      "time": "2026-02-09T02:51:23.832999+01:00"
+    },
+    {
+      "name": "cordon:done",
+      "time": "2026-02-09T02:51:23.842259+01:00"
+    },
+    {
+      "name": "drain:start",
+      "time": "2026-02-09T02:51:23.850974+01:00"
+    },
+    {
+      "name": "drain:done",
+      "time": "2026-02-09T02:51:28.209848+01:00"
+    },
+    {
+      "name": "reschedule:ready",
+      "time": "2026-02-09T02:51:28.226359+01:00"
+    },
+    {
+      "name": "uncordon:start",
+      "time": "2026-02-09T02:51:28.226369+01:00"
+    },
+    {
+      "name": "uncordon:done",
+      "time": "2026-02-09T02:51:28.244966+01:00"
+    },
+    {
+      "name": "descheduler:run",
+      "time": "2026-02-09T02:51:28.244976+01:00"
+    },
+    {
+      "name": "descheduler:done",
+      "time": "2026-02-09T02:51:28.25496+01:00"
+    },
+    {
+      "name": "snapshot:after",
+      "time": "2026-02-09T02:52:28.255991+01:00"
+    }
+  ],
+  "summary": {
+    "run_id": "20260209-025012",
+    "scenario": "maintenance",
+    "profile": "low-node-utilization",
+    "duration_seconds": 135.516721458,
+    "rebalance_time_seconds": -1,
+    "before": {
+      "time": "2026-02-09T02:50:18.846167+01:00",
+      "pods_stddev": 8.660254037844387,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    "after": {
+      "time": "2026-02-09T02:52:28.25601+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    }
+  },
+  "samples": [
+    {
+      "time": "2026-02-09T02:50:12.824899+01:00",
+      "pods_stddev": 0,
+      "pods_max_min_ratio": 0,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 0
+    },
+    {
+      "time": "2026-02-09T02:50:17.825762+01:00",
+      "pods_stddev": 8.660254037844387,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:22.825666+01:00",
+      "pods_stddev": 15,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:27.825371+01:00",
+      "pods_stddev": 9.390819985496474,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 61
+    },
+    {
+      "time": "2026-02-09T02:50:32.825797+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:37.825091+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:42.825141+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:47.825744+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:52.825673+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:50:57.825726+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:02.825694+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:07.825701+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:12.825661+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:17.825678+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:22.825642+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:27.825+01:00",
+      "pods_stddev": 15,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:32.825569+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:37.824905+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:42.825608+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:47.825632+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:52.825594+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:51:57.825576+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:02.825601+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:07.825191+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:12.825181+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:17.825543+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:22.824687+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    },
+    {
+      "time": "2026-02-09T02:52:27.824866+01:00",
+      "pods_stddev": 9.40744386111339,
+      "pods_max_min_ratio": -1,
+      "unschedulable_pods": 0,
+      "nodes_count": 4,
+      "pods_counted": 60
+    }
+  ],
+  "before_snapshot": {
+    "time": "2026-02-09T02:50:18.846167+01:00",
+    "nodes": {
+      "deschedbench": {
+        "pods": 0,
+        "cpu_requested_milli": 0,
+        "mem_requested_bytes": 0,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m02": {
+        "pods": 20,
+        "cpu_requested_milli": 2000,
+        "mem_requested_bytes": 2684354560,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m03": {
+        "pods": 20,
+        "cpu_requested_milli": 2000,
+        "mem_requested_bytes": 2684354560,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m04": {
+        "pods": 20,
+        "cpu_requested_milli": 2000,
+        "mem_requested_bytes": 2684354560,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      }
+    },
+    "unschedulable_pods": 0,
+    "total_pods_counted": 60,
+    "namespace": "deschedbench-20260209-025012",
+    "namespace_only": true
+  },
+  "after_snapshot": {
+    "time": "2026-02-09T02:52:28.25601+01:00",
+    "nodes": {
+      "deschedbench": {
+        "pods": 0,
+        "cpu_requested_milli": 0,
+        "mem_requested_bytes": 0,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m02": {
+        "pods": 23,
+        "cpu_requested_milli": 2300,
+        "mem_requested_bytes": 3087007744,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m03": {
+        "pods": 14,
+        "cpu_requested_milli": 1400,
+        "mem_requested_bytes": 1879048192,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      },
+      "deschedbench-m04": {
+        "pods": 23,
+        "cpu_requested_milli": 2300,
+        "mem_requested_bytes": 3087007744,
+        "cpu_allocatable_milli": 6000,
+        "mem_allocatable_bytes": 16749568000
+      }
+    },
+    "unschedulable_pods": 0,
+    "total_pods_counted": 60,
+    "namespace": "deschedbench-20260209-025012",
+    "namespace_only": true
+  },
+  "evictions": []
+}

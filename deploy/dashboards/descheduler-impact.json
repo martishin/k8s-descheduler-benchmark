@@ -1,0 +1,70 @@
+{
+  "title": "Descheduler Impact",
+  "tags": [
+    "descheduler",
+    "deschedbench"
+  ],
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "refresh": "5s",
+  "panels": [
+    {
+      "title": "Pods Balance (stddev, max/min)",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "deschedbench_pods_stddev",
+          "legendFormat": "stddev"
+        },
+        {
+          "expr": "deschedbench_pods_max_min_ratio",
+          "legendFormat": "max/min"
+        }
+      ]
+    },
+    {
+      "title": "Unschedulable Pods",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "deschedbench_unschedulable_pods",
+          "legendFormat": "unschedulable"
+        }
+      ]
+    },
+    {
+      "title": "Descheduler Activity (optional metrics)",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 16
+      },
+      "targets": [
+        {
+          "expr": "sum(rate(pods_evicted_total[5m]))",
+          "legendFormat": "evictions_per_sec"
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(loop_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "loop_p95"
+        }
+      ]
+    }
+  ]
+}

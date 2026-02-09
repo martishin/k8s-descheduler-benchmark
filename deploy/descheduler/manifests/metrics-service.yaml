@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: deschedbench-descheduler-metrics
+  namespace: {{NAMESPACE}}
+  labels:
+    app: deschedbench-descheduler
+    deschedbench: "true"
+spec:
+  selector:
+    app: deschedbench-descheduler
+  ports:
+    - name: metrics
+      port: 10258
+      targetPort: metrics
+      protocol: TCP

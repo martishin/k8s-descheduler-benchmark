@@ -1,0 +1,27 @@
+apiVersion: "descheduler/v1alpha2"
+kind: "DeschedulerPolicy"
+
+maxNoOfPodsToEvictPerNode: 10
+maxNoOfPodsToEvictPerNamespace: 20
+
+profiles:
+  - name: "deschedbench"
+    pluginConfig:
+      - name: "DefaultEvictor"
+        args:
+          labelSelector:
+            matchLabels:
+              deschedbench: "true"
+          evictLocalStoragePods: false
+          evictSystemCriticalPods: false
+          ignorePvcPods: true
+          nodeFit: true
+      - name: "RemovePodsViolatingTopologySpreadConstraint"
+        args:
+          namespaces:
+            include:
+              - {{NAMESPACE}}
+    plugins:
+      deschedule:
+        enabled:
+          - "RemovePodsViolatingTopologySpreadConstraint"

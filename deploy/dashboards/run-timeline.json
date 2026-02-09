@@ -1,0 +1,78 @@
+{
+  "title": "Run Timeline",
+  "tags": [
+    "descheduler",
+    "deschedbench"
+  ],
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "refresh": "5s",
+  "panels": [
+    {
+      "title": "Phase Markers",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"workload:create\"}[1m])",
+          "legendFormat": "workload:create"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"workload:ready\"}[1m])",
+          "legendFormat": "workload:ready"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"snapshot:before\"}[1m])",
+          "legendFormat": "snapshot:before"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"cordon:start\"}[1m])",
+          "legendFormat": "cordon:start"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"cordon:done\"}[1m])",
+          "legendFormat": "cordon:done"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"drain:start\"}[1m])",
+          "legendFormat": "drain:start"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"drain:done\"}[1m])",
+          "legendFormat": "drain:done"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"reschedule:ready\"}[1m])",
+          "legendFormat": "reschedule:ready"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"uncordon:start\"}[1m])",
+          "legendFormat": "uncordon:start"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"uncordon:done\"}[1m])",
+          "legendFormat": "uncordon:done"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"descheduler:run\"}[1m])",
+          "legendFormat": "descheduler:run"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"descheduler:done\"}[1m])",
+          "legendFormat": "descheduler:done"
+        },
+        {
+          "expr": "increase(deschedbench_phase_total{phase=\"snapshot:after\"}[1m])",
+          "legendFormat": "snapshot:after"
+        }
+      ]
+    }
+  ]
+}
