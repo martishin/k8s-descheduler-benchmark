@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/metrics"
-	"k8s-descheduler-benchmark/pkg/report"
+	"k8s-descheduler-benchmark/internal/metrics"
+	"k8s-descheduler-benchmark/internal/report"
 )
 
 func TestComputeRebalanceTime(t *testing.T) {

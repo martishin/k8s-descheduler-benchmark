@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"k8s-descheduler-benchmark/pkg/logging"
+	"k8s-descheduler-benchmark/internal/logging"
 
 	"github.com/spf13/cobra"
 )

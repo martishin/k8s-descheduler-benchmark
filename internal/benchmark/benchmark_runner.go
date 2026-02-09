@@ -6,8 +6,8 @@ import (
 	"log/slog"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/workloads"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/workloads"
 	"k8s.io/client-go/kubernetes"
 )
 

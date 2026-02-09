@@ -3,8 +3,8 @@ package benchmark
 import (
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/k8s"
-	"k8s-descheduler-benchmark/pkg/workloads"
+	"k8s-descheduler-benchmark/internal/k8s"
+	"k8s-descheduler-benchmark/internal/workloads"
 )
 
 type MaintenanceConfig struct {

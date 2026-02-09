@@ -6,11 +6,11 @@ import (
 	"log/slog"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/descheduler"
-	"k8s-descheduler-benchmark/pkg/k8s"
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/report"
-	"k8s-descheduler-benchmark/pkg/workloads"
+	"k8s-descheduler-benchmark/internal/descheduler"
+	"k8s-descheduler-benchmark/internal/k8s"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/report"
+	"k8s-descheduler-benchmark/internal/workloads"
 
 	"k8s.io/apimachinery/pkg/util/wait"
 )

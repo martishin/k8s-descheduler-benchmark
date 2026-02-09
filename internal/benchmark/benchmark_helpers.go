@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"strings"
 
-	"k8s-descheduler-benchmark/pkg/k8s"
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/report"
+	"k8s-descheduler-benchmark/internal/k8s"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/report"
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

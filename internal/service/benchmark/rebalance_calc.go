@@ -3,8 +3,8 @@ package benchmark
 import (
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/metrics"
-	"k8s-descheduler-benchmark/pkg/report"
+	"k8s-descheduler-benchmark/internal/metrics"
+	"k8s-descheduler-benchmark/internal/report"
 )
 
 func computeRebalanceTime(samples []metrics.Sample, phases []report.PhaseMarker, threshold float64) float64 {

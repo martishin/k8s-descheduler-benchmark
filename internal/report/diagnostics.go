@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"k8s-descheduler-benchmark/pkg/metrics"
+	"k8s-descheduler-benchmark/internal/metrics"
 )
 
 func FormatNodePods(snapshot metrics.Snapshot) string {

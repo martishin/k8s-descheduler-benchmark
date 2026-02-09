@@ -3,9 +3,9 @@ package benchmark
 import (
 	"fmt"
 
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/metrics"
-	"k8s-descheduler-benchmark/pkg/report"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/metrics"
+	"k8s-descheduler-benchmark/internal/report"
 )
 
 func logSummary(summary report.Summary, before metrics.Snapshot, after metrics.Snapshot) {

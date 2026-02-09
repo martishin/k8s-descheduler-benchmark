@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/descheduler"
-	"k8s-descheduler-benchmark/pkg/workloads"
+	"k8s-descheduler-benchmark/internal/descheduler"
+	"k8s-descheduler-benchmark/internal/workloads"
 )
 
 type Plan struct {

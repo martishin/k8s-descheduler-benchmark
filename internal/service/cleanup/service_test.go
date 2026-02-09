@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"k8s-descheduler-benchmark/pkg/logging"
+	"k8s-descheduler-benchmark/internal/logging"
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

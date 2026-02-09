@@ -3,7 +3,7 @@ package report
 import (
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/metrics"
+	"k8s-descheduler-benchmark/internal/metrics"
 )
 
 type RunConfig struct {

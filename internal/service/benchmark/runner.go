@@ -11,12 +11,12 @@ import (
 	"syscall"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/benchmark"
-	"k8s-descheduler-benchmark/pkg/k8s"
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/metrics"
-	"k8s-descheduler-benchmark/pkg/report"
-	"k8s-descheduler-benchmark/pkg/service/cleanup"
+	"k8s-descheduler-benchmark/internal/benchmark"
+	"k8s-descheduler-benchmark/internal/k8s"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/metrics"
+	"k8s-descheduler-benchmark/internal/report"
+	"k8s-descheduler-benchmark/internal/service/cleanup"
 	"k8s.io/client-go/kubernetes"
 )
 

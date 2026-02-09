@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"k8s-descheduler-benchmark/pkg/workloads"
+	"k8s-descheduler-benchmark/internal/workloads"
 )
 
 func TestNewMaintenanceRunnerDefaults(t *testing.T) {

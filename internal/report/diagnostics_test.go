@@ -3,7 +3,7 @@ package report
 import (
 	"testing"
 
-	"k8s-descheduler-benchmark/pkg/metrics"
+	"k8s-descheduler-benchmark/internal/metrics"
 )
 
 func TestFormatNodePods(t *testing.T) {

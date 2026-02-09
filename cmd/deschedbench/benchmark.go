@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"k8s-descheduler-benchmark/pkg/k8s"
-	"k8s-descheduler-benchmark/pkg/logging"
-	benchsvc "k8s-descheduler-benchmark/pkg/service/benchmark"
+	"k8s-descheduler-benchmark/internal/k8s"
+	"k8s-descheduler-benchmark/internal/logging"
+	benchsvc "k8s-descheduler-benchmark/internal/service/benchmark"
 
 	"github.com/spf13/cobra"
 )

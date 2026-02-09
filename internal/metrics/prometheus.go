@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"k8s-descheduler-benchmark/pkg/logging"
+	"k8s-descheduler-benchmark/internal/logging"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

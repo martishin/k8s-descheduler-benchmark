@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"k8s-descheduler-benchmark/pkg/logging"
-	"k8s-descheduler-benchmark/pkg/metrics"
-	"k8s-descheduler-benchmark/pkg/report"
+	"k8s-descheduler-benchmark/internal/logging"
+	"k8s-descheduler-benchmark/internal/metrics"
+	"k8s-descheduler-benchmark/internal/report"
 	"k8s.io/client-go/kubernetes"
 )
 
