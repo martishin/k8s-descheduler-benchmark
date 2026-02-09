@@ -139,6 +139,63 @@ go run ./cmd/deschedbench benchmark --pods 60 --cpu 200m --mem 256Mi --profile l
 go run ./cmd/deschedbench benchmark --pods 60 --profile baseline --out results/custom.json
 ```
 
+<details>
+<summary>Example command output (trimmed)</summary>
+
+```text
+monkey@local:/Volumes/SSD/development/code/k8s-descheduler-benchmark$ make bench-maintenance-descheduler PROFILE=low-node-utilization
+time=2026-02-09T02:50:12 level=INFO msg="benchmark namespace" value=deschedbench-20260209-025012
+time=2026-02-09T02:50:12 level=INFO msg="results file path" value=results/descheduler.json
+time=2026-02-09T02:50:12 level=INFO msg="metrics server start" port=8080
+time=2026-02-09T02:50:12 level=INFO msg="run id" value=20260209-025012
+time=2026-02-09T02:50:12 level=INFO msg="starting maintenance scenario"
+time=2026-02-09T02:50:12 level=INFO msg="namespace created" name=deschedbench-20260209-025012
+time=2026-02-09T02:50:12 level=INFO msg="workload creation start" workload=deschedbench pods=60
+time=2026-02-09T02:50:12 level=INFO msg="workload creation done" workload=deschedbench pods=60
+time=2026-02-09T02:50:12 level=INFO msg="workload waiting start" workload=deschedbench pods=60
+time=2026-02-09T02:50:18 level=INFO msg="workload waiting done" workload=deschedbench pods=60
+time=2026-02-09T02:50:18 level=INFO msg="snapshot before start"
+time=2026-02-09T02:50:18 level=INFO msg="snapshot before done" metric="pods per node (count)" pods_per_node="deschedbench=0 deschedbench-m02=20 deschedbench-m03=20 deschedbench-m04=20"
+time=2026-02-09T02:50:18 level=INFO msg="descheduler install"
+time=2026-02-09T02:50:18 level=INFO msg="descheduler installed"
+time=2026-02-09T02:50:18 level=INFO msg="maintenance iteration" iteration=1
+time=2026-02-09T02:50:18 level=INFO msg="selected drain node" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:18 level=INFO msg="cordon start" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:18 level=INFO msg="cordon done" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:19 level=INFO msg="drain start" node=deschedbench-m02 pods=20 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="drain done" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="pods ready after drain" pods=60
+time=2026-02-09T02:50:23 level=INFO msg="reschedule ready" pods=60 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="uncordon start" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="uncordon done" node=deschedbench-m02 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="descheduler run" iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="descheduler job created" job=deschedbench-descheduler-20260209-025012-1 iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="descheduler done" iteration=1
+time=2026-02-09T02:50:23 level=INFO msg="waiting after uncordon" duration=1m0s iteration=1
+time=2026-02-09T02:51:23 level=INFO msg="maintenance iteration" iteration=2
+time=2026-02-09T02:51:23 level=INFO msg="selected drain node" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:23 level=INFO msg="cordon start" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:23 level=INFO msg="cordon done" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:23 level=INFO msg="drain start" node=deschedbench-m03 pods=23 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="drain done" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="pods ready after drain" pods=60
+time=2026-02-09T02:51:28 level=INFO msg="reschedule ready" pods=60 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="uncordon start" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="uncordon done" node=deschedbench-m03 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="descheduler run" iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="descheduler job created" job=deschedbench-descheduler-20260209-025012-2 iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="descheduler done" iteration=2
+time=2026-02-09T02:51:28 level=INFO msg="waiting after uncordon" duration=1m0s iteration=2
+time=2026-02-09T02:52:28 level=INFO msg="snapshot after benchmark start"
+time=2026-02-09T02:52:28 level=INFO msg="snapshot after benchmark done" metric="pods per node (count)" pods_per_node="deschedbench=0 deschedbench-m02=23 deschedbench-m03=14 deschedbench-m04=23"
+time=2026-02-09T02:52:28 level=INFO msg="run summary" duration=135.5s rebalance_time=-1.0s before_pods_stddev=8.660 after_pods_stddev=9.407 before_pods="deschedbench=0 deschedbench-m02=20 deschedbench-m03=20 deschedbench-m04=20" after_pods="deschedbench=0 deschedbench-m02=23 deschedbench-m03=14 deschedbench-m04=23"
+time=2026-02-09T02:52:28 level=INFO msg="benchmark completed"
+time=2026-02-09T02:52:28 level=INFO msg="namespace cleanup start" reason=success namespace=deschedbench-20260209-025012
+time=2026-02-09T02:52:41 level=INFO msg="namespace cleanup done" namespace=deschedbench-20260209-025012
+time=2026-02-09T02:52:41 level=INFO msg="results output" path=results/descheduler.json
+```
+</details>
+
 ### Preflight
 
 ```bash
